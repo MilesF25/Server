@@ -19,3 +19,16 @@ add entry code stuff
 7/5
 
 A huge revamp of the code. I wanted to add the music section to this part but i wasnt sure how. I ended up deciding that the best way to do it is to make the music part a 5th client. But then there was the issue of only allowing 4 people to connect to the server. to solve this I made the music bot its own little place on the server. now it can join without affecting the amount of human users that can be in a server. Doing this did require me to rewrite the most of the code. What i had before was static, how would i prompt the music code to enter a name and a valid room number? The work around i came up with was to have a token that is hard coded in the server class, when the music client connects to the server it will send the token and the server will validate it and allow it to join. This isnt the best practice for security but since this is just a project to get familar with building a server it should work. I also was able to get the group chat feature working so everyone that connects can send and see messages. The next part is to acutal get the music client to stream music and find a way to get rodio working.
+
+
+
+
+7/7
+
+Ive given up on adding the music part. Its just too confusing and ive rewritten my code multiple times, im just sticking with what i got and will make the musicbot a ai chat bot. hopefully that will work instead. im using google gemini for that
+
+
+
+7/10
+
+need to test if the ai client is working once i have more tokens. the ui for the client is done. ratatui is a pain but it should be working
