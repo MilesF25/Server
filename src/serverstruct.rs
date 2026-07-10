@@ -7,7 +7,7 @@ pub struct Server_Room {
 
     //current users
     users: HashMap<SocketAddr, String>,
-    current_song: Option<String>, // This is so it can be empty just incase
+
     // music bot
     music_bot_token: String,
     current_bots: HashMap<SocketAddr, String>,
@@ -19,7 +19,7 @@ impl Server_Room {
         Server_Room {
             entry_code,
             users: HashMap::new(),
-            current_song: None, //no music when server starts
+
             music_bot_token: "E3ICY0BV5KAFKU45Y7_musicbot".to_string(),
             current_bots: HashMap::new(),
         }
