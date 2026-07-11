@@ -167,7 +167,7 @@ async fn main() {
                     }
 
                     // Branch 2: did the broadcast channel deliver a message
-                    // (from us or any other client/bot)?
+
                     msg = rx.recv() => {
                         if let Ok(msg) = msg {
                             // Write it out to connection's socket.
@@ -180,8 +180,7 @@ async fn main() {
                 }
             }
 
-            // Loop exited, this connection ended. Remove them from whichever registry they actually joined (bot slot vs regular user slot),
-            // then announce it to everyone still connected.
+            // Loop exited, this connection ended. Remove them from whichever registry they actually joined and then announce it to everyone still connected.
             if is_bot {
                 room.lock().unwrap().remove_bot(&addr);
             } else {
