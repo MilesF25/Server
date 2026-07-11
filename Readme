@@ -15,7 +15,7 @@ A real-time chat server built in Rust with room-based architecture and music bot
 
 - **Multi-user chat rooms** with capacity limits (max 4 users per room)
 - **Access codes** for secure room entry
-- **Music bot support** with dedicated authentication tokens
+- **Chat bot support** with dedicated authentication tokens
 - **Async networking** powered by Tokio for handling concurrent connections
 
 ## Architecture
@@ -36,10 +36,6 @@ Implements the `Server_Room` struct managing room state:
 - **Ratatui** - Terminal UI framework
 - **Gemini-rs** - AI integration support
 - **Crossterm** - Cross-platform terminal utilities
-
-## Status
-
-Early-stage development. Core message types and room management logic are in place; main server loop and connection handling pending.
 
 ## How To run
 
