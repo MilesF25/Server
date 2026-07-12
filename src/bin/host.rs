@@ -35,9 +35,9 @@ async fn main() {
     // The `100` is the channel's buffer size
     let (tx, _rx) = broadcast::channel::<String>(100);
 
-    // Main accept loop: waits for new TCP connections forever.
+    // loop waits for new TCP connections forever.
     loop {
-        //probably the most confusing part
+        //probably the most confusing part, the comments are so i can remember what ive done
 
         // Accept a new client connection. await pauses the program until someone joins
         let (socket, addr) = listener.accept().await.unwrap();
