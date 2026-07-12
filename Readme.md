@@ -100,3 +100,7 @@ cargo run --bin ai_chatbot
 ```
 
 The chatbot will authenticate using the API key stored in the `.env` file and join the chat room.
+
+#### Notice for ai
+
+I still need to test it out but i ran out of tokens, as of now im not sure if it works as intended
