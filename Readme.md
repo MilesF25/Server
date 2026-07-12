@@ -37,19 +37,66 @@ Implements the `Server_Room` struct managing room state:
 - **Gemini-rs** - AI integration support
 - **Crossterm** - Cross-platform terminal utilities
 
-## How To run
+## How to Run
 
-Do all the Cargo stuff
+### Prerequisites
 
-First you want to run the server.
-- cd into src
-- enter: `cargo run --bin host`
+Before running the project, make sure you have:
 
-Then run the client, up to 4 people can connect
-- cd into src
-- enter: `cargo run --bin client`
+- Rust and Cargo installed
+- A Google AI Studio API key (required for the AI chatbot)
 
-Then if you want to have a chatbot join.
-- cd into src
-- enter: `cargo run --bin ai_chatbot`
+---
 
+### Environment Setup
+
+The AI chatbot requires a Google AI Studio API key.
+
+1. Create a file named `.env` inside the `music/` directory.
+2. Add the following line to the file:
+
+```env
+MY_API_KEY="your_api_key_here"
+```
+
+Replace `your_api_key_here` with your actual Google AI Studio API key.
+
+> **Note:** If you only want to run the server and regular clients, you do not need the `.env` file. It is only required for the AI chatbot.
+
+---
+
+### Running the Application
+
+#### 1. Start the Server
+
+From the project root, run:
+
+```bash
+cargo run --bin host
+```
+
+Leave this terminal open while the server is running.
+
+---
+
+#### 2. Start One or More Clients
+
+Open a new terminal for each client and run:
+
+```bash
+cargo run --bin client
+```
+
+Up to **4 clients** can connect to the same chat room simultaneously.
+
+---
+
+#### 3. (Optional) Start the AI Chatbot
+
+If you created the `.env` file, open another terminal and run:
+
+```bash
+cargo run --bin ai_chatbot
+```
+
+The chatbot will authenticate using the API key stored in the `.env` file and join the chat room.
