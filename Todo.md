@@ -32,3 +32,11 @@ Ive given up on adding the music part. Its just too confusing and ive rewritten 
 7/10
 
 need to test if the ai client is working once i have more tokens. the ui for the client is done. ratatui is a pain but it should be working
+
+
+
+
+
+7/11
+
+well i can't test the ai chatbot caused i used all my tokens trying to get it to work.  I was using the wrong model and getting errors so that ate all the tokens.
