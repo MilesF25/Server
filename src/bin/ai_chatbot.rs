@@ -24,14 +24,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = gemini_rs::Client::new(api_key);
 
     while let Ok(Some(line)) = server_reader.next_line().await {
-        // FIX 1: Ignore messages sent by the bot itself to prevent infinite loops
+        // Ignore messages sent by the bot itself to prevent infinite loops
         if line.starts_with("music_bot:") {
             continue;
         }
 
         let lower_line = line.to_lowercase();
 
-        // Use a slightly stricter trigger to avoid accidental activation
+        // Use a slightly strict trigger to avoid accidental activation
         if let Some(pos) = lower_line.find(": gemini") {
             let prompt = line[pos + 9..].trim();
 
