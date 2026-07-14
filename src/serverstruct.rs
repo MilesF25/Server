@@ -55,7 +55,7 @@ impl Server_Room {
     // add music bot
 
     pub fn add_bot(&mut self, addr: SocketAddr, name: String) {
-        self.users.insert(addr, name);
+        self.current_bots.insert(addr, name);
     }
 
     //  when someone leaves
@@ -65,7 +65,7 @@ impl Server_Room {
 
     // removes the bot
     pub fn remove_bot(&mut self, addr: &SocketAddr) -> Option<String> {
-        self.users.remove(addr)
+        self.current_bots.remove(addr)
     }
 
     // code check
