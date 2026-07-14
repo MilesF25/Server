@@ -99,4 +99,4 @@ The chatbot will authenticate using the API key stored in the `.env` file and jo
 
 #### Notice for ai
 
-I still need to test it out but i ran out of tokens, as of now im not sure if it works as intended
+google gemini isnt working becuase I need to setup a billing account. I am looking at swtiching to a different llm

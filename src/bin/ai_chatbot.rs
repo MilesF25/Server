@@ -4,6 +4,7 @@ use std::env;
 use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
 use tokio::net::TcpStream;
 
+// google gemini isnt working becuase I need to setup a billing account. I am looking at swtiching to a different llm
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
@@ -24,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = gemini_rs::Client::new(api_key);
 
     while let Ok(Some(line)) = server_reader.next_line().await {
-        // Ignore messages sent by the bot itself to prevent infinite loops
+        // Ignore messages sent by the bot itself to prevent infinite loops (it is hardcoded for music bot, check line 96 in host)
         if line.starts_with("music_bot:") {
             continue;
         }
